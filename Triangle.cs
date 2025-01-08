@@ -1,0 +1,17 @@
+class Triangle : IFigure
+{
+    double a;
+    double b;
+    double c;
+    public Triangle(double a, double b, double c)
+    {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+    public double Area()
+    {
+        double semiperimeter = (a + b + c) / 2;
+        return Math.Sqrt(semiperimeter * (semiperimeter - a) * (semiperimeter - b) * (semiperimeter - c));
+    }
+}
